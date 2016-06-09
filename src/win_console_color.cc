@@ -65,7 +65,7 @@ namespace evl
 			update_colors();
 			deftextcol = textcol; defbackcol = backcol;
 		}
-#elif __PF_LINUX_
+#elif _PF_LINUX_
         ///////////////////////
 
 
@@ -73,7 +73,7 @@ namespace evl
 		// static HANDLE std_con_out;
 
 		//If colorprotect is true, background and text colors will never be the same
-		// static bool colorprotect = false;
+		static bool colorprotect = false;
 
 		/*
 		textcol - current text color
