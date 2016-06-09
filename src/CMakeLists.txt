@@ -1,7 +1,7 @@
 # CMakeLists for src directory
 PROJECT(evl_logger)
 
-SET(SRCS_FILES evl_logger.cc)
+aux_source_directory(. SRCS_FILES)
 
 # shared library
 ADD_LIBRARY(evl_logger SHARED ${SRCS_FILES})
