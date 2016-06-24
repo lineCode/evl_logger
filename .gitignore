@@ -15,3 +15,6 @@
 /build/evl_logger.sdf
 /build/ALL_BUILD.vcxproj
 /build/ALL_BUILD.vcxproj.filters
+build/linux/src/*
+build/linux/src/*.*
+*/*.cmake
