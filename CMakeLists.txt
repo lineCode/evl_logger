@@ -29,6 +29,7 @@ INCLUDE_DIRECTORIES(
     ${PROJECT_SOURCE_DIR}/include
 	
 	${OTHER_INCLUDE_DIRS}
+    /usr/local/boost_1_61_0
 )
 
 # lib directories
