@@ -5,6 +5,7 @@ aux_source_directory(. SRCS_FILES)
 
 # shared library
 ADD_LIBRARY(evl_logger SHARED ${SRCS_FILES})
+TARGET_LINK_LIBRARIES(evl_logger log4cplusD)
 
 # static library
 ADD_LIBRARY(evl_logger_static STATIC ${SRCS_FILES})

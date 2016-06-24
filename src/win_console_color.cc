@@ -1,10 +1,15 @@
+#if _PF_WINDOWS_
+#include <wtypes.h>
+#endif 
+
 #include <evl_logger/win_console_color.h>
+
 
 namespace evl
 {
 	namespace utility
 	{
-#if _PF_WINDOWNS_
+#if _PF_WINDOWS_
 
 		//Standard Output Handle
 		static HANDLE std_con_out;
