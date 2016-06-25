@@ -82,7 +82,8 @@ namespace evl
 
 #else 
 
-
+//////////////////////////////////////////////////////////////////////////
+// 直向输出
 #define EVL_LOG_FATAL(logger_obj, MSG) \
 	LOG4CPLUS_FATAL( logger_obj.GetImpl(evl::utility::CONSOLE_COLOR_TYPE_GREEN), MSG);
 
@@ -98,6 +99,25 @@ namespace evl
 #define EVL_LOG_INFO(logger_obj, MSG) \
 	LOG4CPLUS_INFO( logger_obj.GetImpl(evl::utility::CONSOLE_COLOR_TYPE_WHITE), MSG);
 
+//////////////////////////////////////////////////////////////////////////
+// 格式输出
+#define EVL_LOG_FATAL_FMT(logger_obj, ...) \
+	LOG4CPLUS_FATAL_FMT( logger_obj.GetImpl(evl::utility::CONSOLE_COLOR_TYPE_GREEN), __VA_ARGS__);
+
+#define EVL_LOG_ERROR_FMT(logger_obj, ...) \
+	LOG4CPLUS_ERROR_FMT( logger_obj.GetImpl(evl::utility::CONSOLE_COLOR_TYPE_RED), __VA_ARGS__);
+
+#define EVL_LOG_WARN_FMT(logger_obj, ...) \
+	LOG4CPLUS_WARN_FMT( logger_obj.GetImpl(evl::utility::CONSOLE_COLOR_TYPE_YELLOW), __VA_ARGS__);
+
+#define EVL_LOG_DEBUG_FMT(logger_obj, ...) \
+	LOG4CPLUS_DEBUG_FMT( logger_obj.GetImpl(evl::utility::CONSOLE_COLOR_TYPE_MAGENTA), __VA_ARGS__);
+
+#define EVL_LOG_INFO_FMT(logger_obj, ...) \
+	LOG4CPLUS_INFO_FMT( logger_obj.GetImpl(evl::utility::CONSOLE_COLOR_TYPE_WHITE), __VA_ARGS__);
+
+//////////////////////////////////////////////////////////////////////////
+// 带函数名输出
 #define EVL_LOG_FATAL_FUNCLINE(logger_obj, MSG) \
 	EVL_LOG_FATAL(logger_obj, "(" << __FUNCTION__ << ":" << __LINE__ << ") " << MSG)
 
