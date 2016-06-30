@@ -19,3 +19,4 @@ build/linux/src/*
 build/linux/src/*.*
 */*.cmake
 *~
+*.un~
