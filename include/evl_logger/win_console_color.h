@@ -11,6 +11,7 @@ Global variables - textcol,backcol,deftextcol,defbackcol,colorprotect*/
 #endif
 
 #include <iosfwd>
+#include <cstring>
 #include "setup.h"
 
 namespace evl

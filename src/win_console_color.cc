@@ -3,12 +3,15 @@
 #endif 
 
 #include <evl_logger/win_console_color.h>
-
+#include <cstdio>
 
 namespace evl
 {
 	namespace utility
 	{
+
+		static ColorTypeMapCode g_color_type_map_code;
+
 #if _PF_WINDOWS_
 
 		//Standard Output Handle
@@ -17,7 +20,6 @@ namespace evl
 		//If colorprotect is true, background and text colors will never be the same
 		static bool colorprotect = false;
 
-		static ColorTypeMapCode g_color_type_map_code;
 
 		/*
 		textcol - current text color
