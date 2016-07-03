@@ -50,8 +50,10 @@ namespace evl
 
 			CONSOLE_COLOR_TYPE_YELLOW		= 14,
 			CONSOLE_COLOR_TYPE_WHITE		= 15,
-		};
 
+			MAX_CONSOLE_COLOR_COUNT,
+		};
+	
 		void update_colors();
 
 		void set_color(ConsoleColorType textcolor, ConsoleColorType backcolor);
@@ -80,6 +82,16 @@ namespace evl
 			set_text_color(col);
 			return is;
 		}
+
+		struct ColorTypeMapCode
+		{
+			const char* color_type_map_color[MAX_CONSOLE_COLOR_COUNT];
+
+			ColorTypeMapCode()
+			{
+				memset(&color_type_map_color[0], 0, sizeof(color_type_map_color));
+			}
+		};
 	}
 }	//end of namespace evl
 
