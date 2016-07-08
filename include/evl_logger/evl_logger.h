@@ -19,9 +19,9 @@ namespace evl
 		{
 			LOG_LEVEL_TYPE_INVALID = log4cplus::NOT_SET_LOG_LEVEL,
 			LOG_LEVEL_TYPE_DEBUG = log4cplus::DEBUG_LOG_LEVEL,
-			LOG_LEVEL_TYPE_ERROR = log4cplus::ERROR_LOG_LEVEL,
-			LOG_LEVEL_TYPE_WARN = log4cplus::WARN_LOG_LEVEL,
 			LOG_LEVEL_TYPE_INFO = log4cplus::INFO_LOG_LEVEL,
+			LOG_LEVEL_TYPE_WARN = log4cplus::WARN_LOG_LEVEL,
+			LOG_LEVEL_TYPE_ERROR = log4cplus::ERROR_LOG_LEVEL,
 		};
 
 		class EvlLogger
